@@ -37,5 +37,20 @@ public:
 int main()
 {
 
+    int n;
+    cin >> n;
+
+    vector<int> arr1(n), arr2(n);
+
+    for (int i = 0; i < n; i++)
+        cin >> arr1[i];
+
+    for (int i = 0; i < n; i++)
+        cin >> arr2[i];
+
+    Solution sln;
+    int ans = sln.maxAbsValExpr(arr1, arr2);
+    cout << ans << endl;
+
     return 0;
 }

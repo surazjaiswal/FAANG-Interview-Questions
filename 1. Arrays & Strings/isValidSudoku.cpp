@@ -7,9 +7,9 @@ bool canBePlaced(int a, int b, vector<vector<char>> &board)
     // checking for rows and cols
     for (int x = 0; x < 9; x++)
     {
-        if (board[a][x] == num && x != a)
+        if (board[a][x] == num && x != b)
             return false;
-        if (board[x][b] == num && x != b)
+        if (board[x][b] == num && x != a)
             return false;
     }
 

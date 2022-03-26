@@ -6,26 +6,31 @@ using namespace std;
 int main()
 {
 
-    int n, x;
+    long long n, x;
     cin >> n >> x;
 
-    vector<int> nums(n);
-    for (int i = 0; i < n; i++)
+    vector<long long> nums(n);
+    for (long long i = 0; i < n; i++)
         cin >> nums[i];
 
-    int start = 0, end = nums.size() - 1;
+    long long start = 0, end = nums.size() - 1;
     while (start <= end)
     {
-        int mid = (start + end) / 2;
+        long long mid = (start + end) / 2;
         if (nums[mid] == x)
         {
-            int a = mid, b = mid;
+            long long a = mid, b = mid;
             while (a >= 0 && nums[a] == x)
+            {
                 a--; // finding its first ouccurance
+            }
             while (b < nums.size() && nums[b] == x)
-                b++; // finding last occurance
-            cout << a << " " << b << endl;
+            {
+                b++; // finding last occurance}
+            }
+            cout << a+1 << " " << b-1 << endl;
             // return {a + 1, b - 1};
+            return 0;
         }
         else if (nums[mid] > x)
             end = mid - 1;
