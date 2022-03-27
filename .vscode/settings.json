@@ -3,6 +3,7 @@
         "vector": "cpp",
         "initializer_list": "cpp",
         "valarray": "cpp",
-        "xutility": "cpp"
+        "xutility": "cpp",
+        "iostream": "cpp"
     }
 }
