@@ -65,5 +65,25 @@ public:
 int main()
 {
 
+    int row, col;
+    cin >> row >> col;
+
+    vector<vector<int>> mat(row, vector<int>(col));
+
+    for (int i = 0; i < row; i++)
+    {
+        for (int j = 0; j < col; j++)
+        {
+            cin >> mat[i][j];
+        }
+    }
+
+    Solution s;
+    vector<int> ans = s.findDiagonalOrder(mat);
+    for (int i : ans)
+    {
+        cout << i << " ";
+    }
+
     return 0;
 }
