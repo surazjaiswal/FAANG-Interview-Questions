@@ -1,21 +1,26 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void getLargest(int n)
+void getLargest(long long n)
 {
-    vector<int> nums;
-    int num = n;
+    vector<long long> nums;
+    long long num = n;
     while (num)
     {
-        int r = num/10;
+        long long r = num % 10;
         nums.push_back(r);
         num /= 10;
     }
 
+	if(nums.size() > 9){
+		cout<<-1<<endl;
+		return;
+	}
+
     reverse(nums.begin(), nums.end());
 
-    int sz = nums.size();
-    int i = sz - 1;
+    long long sz = nums.size();
+    long long i = sz - 1;
     while (i > 0 && nums[i - 1] >= nums[i])
     {
         i--;
@@ -27,7 +32,7 @@ void getLargest(int n)
         return;
     }
 
-    int j = sz - 1;
+    long long j = sz - 1;
     while (j >= 0 && nums[j] <= nums[i - 1])
     {
         j--;
@@ -37,10 +42,9 @@ void getLargest(int n)
     reverse(nums.begin() + i, nums.end());
 
     num = 0;
-    for (int i : nums)
+    for (long long i : nums)
     {
-        num = num*10 + i;
-        cout<<num<<" ";
+        num = num * 10 + i;
     }
     cout << num << endl;
 }
@@ -53,7 +57,7 @@ int main()
     // freopen("output.txt", "w", stdout);
     //#endif
 
-    int n;
+    long long n;
     cin >> n;
 
     getLargest(n);
