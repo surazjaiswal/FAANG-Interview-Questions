@@ -1,9 +1,10 @@
 {
-    "files.associations": {
-        "vector": "cpp",
-        "initializer_list": "cpp",
-        "valarray": "cpp",
-        "xutility": "cpp",
-        "iostream": "cpp"
-    }
+  "files.associations": {
+    "vector": "cpp",
+    "initializer_list": "cpp",
+    "valarray": "cpp",
+    "xutility": "cpp",
+    "iostream": "cpp",
+    "utility": "cpp"
+  }
 }
