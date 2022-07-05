@@ -31,7 +31,7 @@ int solve(vector<int> &nums)
 
     int max_len = 0;
     for (int i = 0; i < n; i++)
-        max_len = max(max_len, leftNums[i] + rightNums[i] - 1);
+        max_len = max(max_len, leftNums[i] + rightNums[i] - 1); // -1 becoz same number is considered for two times
 
     return max_len;
 }
